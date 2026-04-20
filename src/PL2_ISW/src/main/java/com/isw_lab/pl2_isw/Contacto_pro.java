@@ -22,17 +22,10 @@ public class Contacto_pro extends Contacto_pers
         return empresa;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
-    }
-
     public String getCargo() {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
     
     
     

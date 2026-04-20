@@ -18,6 +18,7 @@ public class Citas_job extends Citas
             String pduracion)
     {
         super(pfecha, phora, plugar);
+        duracion_est = pduracion;
         agenda_temas = new ArrayList<String>();
     }
 
@@ -29,7 +30,8 @@ public class Citas_job extends Citas
         this.duracion_est = duracion_est;
     }
 
-    public ArrayList<String> getAgenda_temas() {
+    public ArrayList<String> getAgenda_temas()
+    {
         return agenda_temas;
     }
 

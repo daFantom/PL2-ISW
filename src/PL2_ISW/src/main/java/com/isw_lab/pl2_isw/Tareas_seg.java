@@ -16,11 +16,11 @@ public class Tareas_seg extends Tareas_pend
     private ArrayList<Contacto_pro> responsables;
     
     public Tareas_seg(String pdesc, String pstatus, String f_limite,
-            boolean prio, ArrayList<Contacto_pro> presponsables)
+            boolean prio)
     {
         super(pdesc, pstatus, prio);
         fecha_limite = f_limite;
-        presponsables = new ArrayList<Contacto_pro>();
+        responsables = new ArrayList<Contacto_pro>();
     }
 
     public String getFecha_limite() {

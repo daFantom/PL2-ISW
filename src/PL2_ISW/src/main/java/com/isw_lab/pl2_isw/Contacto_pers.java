@@ -15,11 +15,11 @@ public class Contacto_pers {
     {
         nombre = pnombre;
         
-        if(telf.length()==9) telf = ptelf;
-        else throw new IllegalArgumentException("Numero de telefono invalido.");
+        if(ptelf.length()==9) telf = ptelf;
+        else telf = "Invalido";
         
-        if( !(mail.contains(domains[0]) || mail.contains(domains[1]) || mail.contains(domains[2])) ) mail = pmail;
-        else throw new IllegalArgumentException("Correo electronico invalido.");
+        if((pmail.contains(domains[0]) || pmail.contains(domains[1]) || pmail.contains(domains[2])) ) mail = pmail;
+        else mail = "Invalido";
         cp = pcp;
     }
 
@@ -27,36 +27,18 @@ public class Contacto_pers {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getTelf() {
         return telf;
-    }
-
-    public void setTelf(String telf) {
-        if(telf.length()==9) this.telf = telf;
-        else System.out.println("Numero de telefono invalido.");
     }
 
     public String getMail() {
         return mail;
     }
 
-    public void setMail(String mail)
-    {
-        if( mail.contains(domains[0]) || mail.contains(domains[1]) || mail.contains(domains[2]) ) this.mail = mail;
-        else System.out.println("Correo electronico invalido.");
-    }
-
     public String getCp() {
         return cp;
     }
 
-    public void setCp(String cp) {
-        this.cp = cp;
-    }
     
     
 }
