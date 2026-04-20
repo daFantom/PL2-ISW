@@ -9,12 +9,17 @@ package com.isw_lab.pl2_isw;
 
 public class Contacto_pers {
     private String nombre,telf, mail, cp;
+    private String[] domains = {"@gmail.com","@hotmail.com","@yahoo.com"};
     
     public Contacto_pers(String pnombre, String ptelf, String pmail, String pcp)
     {
         nombre = pnombre;
-        telf = ptelf;
-        mail = pmail;
+        
+        if(telf.length()==9) telf = ptelf;
+        else throw new IllegalArgumentException("Numero de telefono invalido.");
+        
+        if( !(mail.contains(domains[0]) || mail.contains(domains[1]) || mail.contains(domains[2])) ) mail = pmail;
+        else throw new IllegalArgumentException("Correo electronico invalido.");
         cp = pcp;
     }
 
@@ -31,15 +36,18 @@ public class Contacto_pers {
     }
 
     public void setTelf(String telf) {
-        this.telf = telf;
+        if(telf.length()==9) this.telf = telf;
+        else System.out.println("Numero de telefono invalido.");
     }
 
     public String getMail() {
         return mail;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setMail(String mail)
+    {
+        if( mail.contains(domains[0]) || mail.contains(domains[1]) || mail.contains(domains[2]) ) this.mail = mail;
+        else System.out.println("Correo electronico invalido.");
     }
 
     public String getCp() {

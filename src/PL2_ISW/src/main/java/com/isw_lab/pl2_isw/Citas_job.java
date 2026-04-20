@@ -33,8 +33,9 @@ public class Citas_job extends Citas
         return agenda_temas;
     }
 
-    public void setAgenda_temas(ArrayList<String> agenda_temas) {
-        this.agenda_temas = agenda_temas;
+    public void addAgenda_temas(String tema) {
+        if(!agenda_temas.contains(tema)) agenda_temas.add(tema);
+        else System.out.println("Tema ya existe en la agenda");
     }
     
     

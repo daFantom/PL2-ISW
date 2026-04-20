@@ -1,5 +1,6 @@
 package com.isw_lab.pl2_isw;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 /**
@@ -25,7 +26,8 @@ public class Citas {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(String fecha)
+    {
         this.fecha = fecha;
     }
 
