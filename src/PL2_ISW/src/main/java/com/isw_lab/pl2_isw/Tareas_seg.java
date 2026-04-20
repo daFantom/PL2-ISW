@@ -35,8 +35,9 @@ public class Tareas_seg extends Tareas_pend
         return responsables;
     }
 
-    public void setResponsables(ArrayList<Contacto_pro> responsables) {
-        this.responsables = responsables;
+    public void addResponsables(Contacto_pro responsable) {
+        if(!responsables.contains(responsable)) responsables.add(responsable);
+        else System.out.println("Ya existe este responsable");
     }
     
     
