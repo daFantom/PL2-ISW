@@ -33,11 +33,6 @@ public class CitasTest {
         assertEquals(expResult, result);
 
     }
-
-    /**
-     * Test of setFecha method, of class Citas.
-     */
-
     /**
      * Test of getHora method, of class Citas.
      */

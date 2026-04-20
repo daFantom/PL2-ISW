@@ -33,7 +33,6 @@ public class Citas_jobTest {
         assertEquals(expResult, result);
 
     }
-
     /**
      * Test of getAgenda_temas method, of class Citas_job.
      */
@@ -43,6 +42,55 @@ public class Citas_jobTest {
         Citas_job instance = new Citas_job("12/20/2026","13:00","Principe de Asturias", "00:15:00");
         ArrayList<String> expResult = new ArrayList();
         ArrayList<String> result = instance.getAgenda_temas();
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of getFecha method, of class Citas.
+     */
+    @Test
+    public void testGetFecha() {
+        System.out.println("Test unitario Citas->getFecha");
+        Citas_job instance = new Citas_job("12/20/2026","13:00","Principe de Asturias", "00:15:00");
+        String expResult = "12/20/2026";
+        String result = instance.getFecha();
+        assertEquals(expResult, result);
+
+    }
+    /**
+     * Test of getHora method, of class Citas.
+     */
+    @Test
+    public void testGetHora() {
+        System.out.println("Test unitario Citas->getHora()");
+        Citas_job instance = new Citas_job("12/20/2026","13:00","Principe de Asturias", "00:15:00");
+        String expResult = "13:00";
+        String result = instance.getHora();
+        assertEquals(expResult, result);
+    }
+
+
+    /**
+     * Test of getLugar method, of class Citas.
+     */
+    @Test
+    public void testGetLugar() {
+        System.out.println("Test unitario Citas->getLugar");
+        Citas_job instance = new Citas_job("12/20/2026","13:00","Principe de Asturias", "00:15:00");
+        String expResult = "Principe de Asturias";
+        String result = instance.getLugar();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getPers_involucradas method, of class Citas.
+     */
+    @Test
+    public void testGetPers_involucradas() {
+        System.out.println("Test unitario Citas->getPers_involucradas PD: EN CASO DE ESTAR VACIAS");
+        Citas_job instance = new Citas_job("12/20/2026","13:00","Principe de Asturias", "00:15:00");
+        ArrayList<Contacto_pers> expResult = new ArrayList<>();
+        ArrayList<Contacto_pers> result = instance.getPers_involucradas();
         assertEquals(expResult, result);
     }
     
